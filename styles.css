@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    padding: 20px 60px;
+    margin: 20px;
+    font-size: 50px;
+}
+
+#pointsContainer {
+    display: flex;
+}
+
+#humanPointsContainer {
+    display: flex;
+    flex: 1;
+}
+
+.points {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#choiceContainer {
+    margin-top: 7px;
+    display: flex;
+}
+
+#humanChoiceContainer {
+    display: flex;
+    flex: 1;
+}
+
+#winner {
+    font-size: 60px;
+}
+
+#winnerContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

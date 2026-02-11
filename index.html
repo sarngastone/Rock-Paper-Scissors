@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
-    <script src="javascript.js"></script>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div id="background">
+        <div class="headerContainer">
+            <h1>Choose One: Scissors, Paper, or Rock</h1>
+        </div>
+        <div id="buttonContainer">
+            <ul>
+                <button onclick="playRound('scissors', getComputerChoice())" class="input" id="Scissors">✂️</button>
+                <button onclick="playRound('paper', getComputerChoice())" class="input" id="Paper">📄</button>
+                <button onclick="playRound('rock', getComputerChoice())" class="input" id="Rock">🪨</button>
+            </ul>
+        </div>
+        <div id="pointsContainer">
+            <div id="humanPointsContainer">
+                <div class="points" id="humanPoints"></div>
+            </div>
+            <div class="points" id="computerPoints"></div>
+        </div>
+        <div id="choiceContainer">
+            <div id="humanChoiceContainer">
+                <div id="humanChoice"></div>
+            </div>
+            <div id="computerChoice"></div>
+        </div>
+        <div id="winnerContainer">
+            <div. id="winner"></div>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
 </body>
 </html>

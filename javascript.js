@@ -1,6 +1,17 @@
 let humanScore = 0
 let computerScore = 0
 
+const humanPoints = document.querySelector("#humanPoints");
+const computerPoints = document.querySelector("#computerPoints");
+
+humanPoints.textContent = 'Human Score: ' + humanScore
+computerPoints.textContent = 'Computer Score: ' + computerScore
+
+const humanSelection = document.querySelector("#humanChoice");
+const computerSelection = document.querySelector("#computerChoice");
+
+const winner = document.querySelector("#winner");
+
 
 function getComputerChoice() {
     let choice = ''
@@ -16,38 +27,20 @@ function getComputerChoice() {
     return choice
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Choose one, scissors, paper, or rock")
-    return humanChoice
-}
-
-// all possible outcomes without ties: rock, scissors|rock, paper|scissors, paper//
-
-
 function playRound(humanChoice, computerChoice) {
-
-    console.log(humanChoice)
-    console.log(computerChoice)
+    humanSelection.textContent = "Human Choice: "  + humanChoice
+    computerSelection.textContent = "Computer Choice: "  + computerChoice
 
     if (humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "scissors" && computerChoice == "paper" || humanChoice == "paper" && computerChoice == "rock") {
-        console.log("Human wins!")
+        winner.textContent = 'Human Wins!!'
         humanScore = humanScore + 1
     } else if (computerChoice == "rock" && humanChoice == "scissors" || computerChoice == "scissors" && humanChoice == "paper" || computerChoice == "paper" && humanChoice == "rock") {
-        console.log("Computer wins!")
+        winner.textContent = 'Computer Wins!!'
         computerScore = computerScore + 1
     } else {
-        console.log("Tie!")
+        winner.textContent = 'Tie!'
     }
-    console.log("Human score:" + ' ' + humanScore)
-    console.log("Computer score:" + ' ' + computerScore)
-}
 
-function playGame() {
-    for (let index = 0; index < 5; index++) {
-    let humanSelection = getHumanChoice()
-    let computerSelection = getComputerChoice()
-    playRound(humanSelection, computerSelection)
+    humanPoints.textContent = 'Human Score: ' + humanScore
+    computerPoints.textContent = 'Computer Score: ' + computerScore
 }
-}
-
-playGame()
